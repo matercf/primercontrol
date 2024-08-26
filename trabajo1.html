@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina Web</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+      }
+      body {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 63px;
+        background: #c46210;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+      }
+      .navbar {
+        display: flex;
+        margin-right: 10px;
+      }
+      .logo {
+        margin-left: 30px;
+      }
+      .logo a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+      .navbar a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+      .navbar a:hover {
+        background: #3f3f3f;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header {
+        height: 60vh !important;
+        background: url(combo\ 1.webp) no-repeat center;
+        background-size: cover;
+      }
+      .title {
+        margin-bottom: 40px;
+        font-size: 60px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #0e0e0e;
+      }
+      p {
+        margin-bottom: 40px;
+        font-size: 18px;
+        color: #fff;
+        padding: 0 100px;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 40px;
+        border: 2px solid #eded46;
+        color: #fff;
+        text-decoration: none;
+        background: #eded46;
+      }
+      .btn:hover {
+        background: none;
+      }
+      .btn-home {
+        display: flex;
+      }
+      .btn-home a {
+        margin: 0 10px;
+      }
+      .content {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .sau {
+        padding: 30px;
+        background: #c46210;
+      }
+      .box-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+      .box-container .box {
+        height: 11rem;
+        width: 17rem;
+        background: #53350a;
+        text-align: center;
+        border-radius: 1rem;
+        box-shadow: 0 0.3rem 5rem rgba(5, 8, 5, 5);
+        margin: 2rem;
+      }
+      .box-container .box i {
+        height: 3rem;
+        width: 3 rem;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        background: #c46210;
+        font-size: 2rem;
+        margin: 1 rem 0;
+      }
+      .box-container .box h3 {
+        font-size: 20px;
+        color: #fff;
+      }
+      .box-container .box p {
+        padding: 0 15px;
+        font-size: 16px;
+      }
+
+      .contact-container {
+        display: flex;
+        background: #ffffffe6; /* Fondo blanco semi-transparente */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 60%;
+        max-width: 900px;
+      }
+
+      .image-section {
+        flex: 1;
+        background: #f7f7f7;
+      }
+
+      .image-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .form-section {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .form-section h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .form-section form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-section div {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .form-section input[type="text"],
+      .form-section input[type="email"],
+      .form-section input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      .form-section input[type="text"]:focus,
+      .form-section input[type="email"]:focus,
+      .form-section input[type="tel"]:focus {
+        border-color: #28a745;
+      }
+
+      .form-section label {
+        position: absolute;
+        top: -12px;
+        left: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 0 5px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .form-section .Send input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .form-section .Send input[type="submit"]:hover {
+        background-color: #218838;
+      }
+      @media screen (max- width: 760px) {
+        .title {
+          margin-botton: 0;
+          font: size 40px;
+        }
+        .sau {
+          height: 120vh;
+        }
+        .navbar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="logo">
+        <a href="#">Logo</a>
+      </div>
+
+      <nav class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Producto</a>
+        <a href="#">Contactanos</a>
+      </nav>
+    </div>
+    <header class="content header">
+      <h2 class="title">Inicio</h2>
+      <p>
+        Estamos emocionados de anunciar la apertura de nuestro nuevo
+        restaurante, donde las hamburguesas se transforman en una experiencia
+        culinaria única. Desde hoy, te invitamos a disfrutar de nuestras
+        deliciosas hamburguesas hechas a mano, con ingredientes frescos y de
+        alta calidad que te harán volver por más.
+      </p>
+      <div class="btn-home">
+        <a href="#" class="btn">Saber mas</a>
+      </div>
+    </header>
+    <section class="content sau">
+      <h2 class="title">Producto</h2>
+      <p>
+        Prueba nuestras hamburguesas, preparadas con carnes seleccionadas y
+        combinaciones de ingredientes únicas, no te pierdas las ofertas que
+        tenemos hoy dia.
+      </p>
+      <div class="box-container">
+        <div class="box">
+          <i class="fab fa-angular"></i>
+          <h3>Combo 1</h3>
+          <p>$13</p>
+          <img src="primero.webp" width="120px" />
+        </div>
+        <div class="box">
+          <i class="fab fa-apple"></i>
+          <h3>Combo 2</h3>
+          <p>$25</p>
+          <img src="segundo.jpg" width="120px" />
+        </div>
+        <div class="box">
+          <i class="fab fa-android"></i>
+          <h3>Combo 3</h3>
+          <p>$20</p>
+          <img src="tercero.png" width="120px" />
+        </div>
+      </div>
+    </section>
+    <section class="content about">
+      <h2 class="title">Contactanos</h2>
+      <div class="contact-container">
+        <div class="image-section">
+          <img src="logo.jpg" alt="hamburguesita" />
+        </div>
+        <div class="form-section">
+          <h1>Contact Us</h1>
+          <form method="post">
+            <div class="YourName">
+              <input type="text" required />
+              <label>Nombre del usuario</label>
+            </div>
+            <div class="Email">
+              <input type="email" required />
+              <label>Your Email</label>
+            </div>
+            <div class="Phone">
+              <input type="tel" required />
+              <label>Phone</label>
+            </div>
+            <div class="Message">
+              <input type="text" required />
+              <label>Message</label>
+            </div>
+            <div class="Send">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
